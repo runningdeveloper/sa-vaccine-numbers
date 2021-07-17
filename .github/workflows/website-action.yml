@@ -23,7 +23,7 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@master
         with:
           find: '<base href="/">'
-          replace: '<base href="/sa-vaccine-numbers/">'
+          replace: '<base href="https://runningdeveloper.github.io/sa-vaccine-numbers/">'
           include: "index.html"
 
       - name: Deploy site
