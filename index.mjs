@@ -12,7 +12,9 @@ const browser = await puppeteer.launch({
 });
 const page = await browser.newPage();
 
-await page.goto(url, { waitUntil: 'networkidle2' });
+await page.goto(url, { waitUntil: 'networkidle2' }).catch(e => {throw new Error(e)});
+
+console.log('guess it doesnt get here')
 
 // wait for the nav icons
 await page.waitForSelector(`.navigation-wrapper`, {
@@ -24,9 +26,6 @@ await page.waitForSelector(`.navigation-wrapper`, {
 await page.$eval(`[title="Next Page"]`, el => el.click());
 
 await page.waitForTimeout(2000)
-
-// is it getting anywhere
-console.log('frames on page', page.frames().length)
 
 const frameOne = page.frames().find(a => a.name() === 'visual-sandbox')
 
