@@ -1,0 +1,73 @@
+{
+    "08-07-2021": {
+        "recorded": "2021-07-09T14:58:25.268Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00",
+        "reportDate": "08 July 2021",
+        "vaccineToday": 191833,
+        "totalVaccine": 4017442
+    },
+    "09-07-2021": {
+        "recorded": "2021-07-10T08:51:54.632Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00",
+        "reportDate": "09 July 2021",
+        "vaccineToday": 175740,
+        "totalVaccine": 4203293
+    },
+    "10-07-2021": {
+        "recorded": "2021-07-11T10:29:29.319Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00",
+        "reportDate": "10 July 2021",
+        "vaccineToday": 16005,
+        "totalVaccine": 4225021
+    },
+    "11-07-2021": {
+        "recorded": "2021-07-12T07:17:24.960Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00",
+        "reportDate": "11 July 2021",
+        "vaccineToday": 7824,
+        "totalVaccine": 4236718
+    },
+    "12-07-2021": {
+        "recorded": "2021-07-12T19:29:35.446Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00",
+        "reportDate": "12 July 2021",
+        "vaccineToday": 146577,
+        "totalVaccine": 4390891
+    },
+    "13-07-2021": {
+        "recorded": "2021-07-14T08:23:55.249Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00",
+        "reportDate": "13 July 2021",
+        "vaccineToday": 137421,
+        "totalVaccine": 4535222
+    },
+    "14-07-2021": {
+        "recorded": "2021-07-15T08:28:58.943Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00",
+        "reportDate": "14 July 2021",
+        "vaccineToday": 146230,
+        "totalVaccine": 4688779
+    },
+    "15-07-2021": {
+        "recorded": "2021-07-16T09:24:43.291Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00",
+        "reportDate": "15 Jul 2021",
+        "vaccineToday": 172466,
+        "totalVaccine": 4869759,
+        "totalJohnson": 946926,
+        "totalPfizer": 3922833,
+        "totalSecondPfizer": 657334,
+        "totalCompletedVaccine": 1604260
+    },
+    "16-07-2021": {
+        "recorded": "2021-07-17T14:00:25.091Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00",
+        "reportDate": "16 Jul 2021",
+        "vaccineToday": 169079,
+        "totalVaccine": 5046267,
+        "totalJohnson": 963402,
+        "totalPfizer": 4082865,
+        "totalSecondPfizer": 710750,
+        "totalCompletedVaccine": 1674152
+    }
+}

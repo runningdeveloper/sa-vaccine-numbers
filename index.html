@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>SA Vaccine Tracker</title>
+    <meta name="description" content="Simple vaccine numbers scraped from sacoronavirus.co.za">
+</head>
+<body>
+    <section>Loading page...</section>
+    <script type="module">
+
+        import { h, Component, render } from 'https://cdn.skypack.dev/preact';
+        import { useState, useEffect } from 'https://cdn.skypack.dev/preact/hooks';
+        import htm from 'https://cdn.skypack.dev/htm';
+        import subDays from 'https://cdn.skypack.dev/date-fns/subDays';
+        import format from 'https://cdn.skypack.dev/date-fns/format';
+        import isBefore from 'https://cdn.skypack.dev/date-fns/isBefore';
+
+        const saPopulation = 59.6e6
+      
+        const html = htm.bind(h)
+
+        const getDateKey = (days) => format(subDays(new Date(), days), 'dd-MM-yyyy')
+
+        const percentOfPopulation = (amount) => ((amount/saPopulation)*100).toFixed(1)
+
+        const DataDisplay = (data) => {
+
+            if(data){
+                return html`
+                <article>
+                    <h1>💉${data?.reportName}<br/>${data?.reportDate}</h1>
+                    <h2>Total last 24h: ${Intl.NumberFormat().format(data.vaccineToday)}</h2>
+                    <h3>Total completed: ${data.totalCompletedVaccine?Intl.NumberFormat().format(data.totalCompletedVaccine):'no data'}</h3>
+                    <h3>Total of population completed: ${data.totalCompletedVaccine?percentOfPopulation(data.totalCompletedVaccine)+`%`:'no data'}</h3>
+                    <h3>Total: ${Intl.NumberFormat().format(data.totalVaccine)}</h3>
+                    <small>Date scraped: ${data.recorded}</small>
+                </article>`
+                }else{
+                    return html`<div>No data for this day</div>`;
+                }
+
+        }
+      
+        function App (props) {
+
+            const [db, setDb] = useState(null);
+            const [prevDays, setPrevDays] = useState(1);
+            const [current, setCurrent] = useState(null);
+
+            useEffect(async ()=>{
+                const result = await fetch('/db.json')
+                const json = await result.json()
+                setDb(json)
+            }, [])
+
+            // stop if its past the data hardcoded end date
+            const endOfData = isBefore(subDays(new Date(), prevDays), new Date(1625695200000))
+
+            useEffect(()=>{
+                if(prevDays && db){
+                    if(db.hasOwnProperty(getDateKey(prevDays))){
+                        setCurrent(db[getDateKey(prevDays)])
+                    }else{
+                        if(!endOfData){
+                            setPrevDays(prevDays+1)
+                        }
+
+                    }
+                }
+            }, [prevDays, db])
+            
+            if(db){
+                return html`
+                <main>
+                    <section>${DataDisplay(current)}</section>
+                    <section>
+                        <button disabled=${endOfData} onClick=${()=>setPrevDays(prevDays+1)}>Back</button>
+                        <div style="width: 0.5em;"></div>
+                        <button disabled=${prevDays<=1} onClick=${()=>setPrevDays(prevDays-1)}>Forward</button>
+                    </section>
+                </main>
+                `
+            }else{
+                return html`<section>Loading data...</section>`;
+            }
+
+        }
+      
+        render(html`<${App} /><blockquote><footer>Source: <a href="https://sacoronavirus.co.za/latest-vaccine-statistics/">https://sacoronavirus.co.za/latest-vaccine-statistics/</a>, <a href="https://en.wikipedia.org/wiki/Demographics_of_South_Africa">https://en.wikipedia.org/wiki/Demographics_of_South_Africa</a></footer></blockquote>`, document.body);
+      </script>
+    
+</body>
+</html>
