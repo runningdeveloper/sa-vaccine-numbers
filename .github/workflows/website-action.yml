@@ -19,6 +19,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Add the base path
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: '<base href="/">'
+          replace: '<base href="/sa-vaccine-numbers/">'
+          include: "index.html"
+
       - name: Deploy site
         uses: peaceiris/actions-gh-pages@v3
         with:
