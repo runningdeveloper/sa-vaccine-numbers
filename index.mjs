@@ -14,8 +14,6 @@ const page = await browser.newPage();
 
 await page.goto(url, { waitUntil: 'networkidle2' }).catch(e => {throw new Error(e)});
 
-console.log('guess it doesnt get here')
-
 // wait for the nav icons
 await page.waitForSelector(`.navigation-wrapper`, {
     visible: true,

@@ -1,11 +1,8 @@
 name: Scrape numbers
 
 on:
-  # push:
-  #   branches: [ main ]
-  # 3am is 5am in SA time
-  schedule:
-    - cron:  '0 3 * * *'
+  push:
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,20 +19,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
+      - name: Deploy site
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.lock') }}
-      
-      - run: node -v
-
-      - run: npm install
-
-      - run: node index.mjs
-
-      # - name: Deploy site
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
