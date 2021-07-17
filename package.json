@@ -1,0 +1,16 @@
+{
+  "name": "sa-vaccine-scrape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.22.1",
+    "puppeteer": "^10.1.0",
+    "simple-json-db": "^1.2.3"
+  }
+}

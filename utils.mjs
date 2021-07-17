@@ -1,0 +1,1 @@
+export const parseNumbers = (num) => isNaN(num)?parseFloat(num.replace(/,/g, '')):num
