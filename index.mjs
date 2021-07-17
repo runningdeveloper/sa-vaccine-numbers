@@ -25,6 +25,9 @@ await page.$eval(`[title="Next Page"]`, el => el.click());
 
 await page.waitForTimeout(2000)
 
+// is it getting anywhere
+console.log('frames on page', page.frames().length)
+
 const frameOne = page.frames().find(a => a.name() === 'visual-sandbox')
 
 // wait for random selector to show up
