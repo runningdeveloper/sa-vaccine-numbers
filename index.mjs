@@ -7,8 +7,7 @@ const db = new JSONdb('./public/db.json');
 const url = `https://app.powerbi.com/view?r=eyJrIjoiMDNlNTMyZWUtYjkyYS00NGE1LTliZTktZDI4MDU0ZTU0OTk1IiwidCI6ImE1MTczNzFjLWYzMTYtNDg0Yy1hYzVjLTk4Yjc2MTI3NzkwYSIsImMiOjl9`
 
 const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--proxy-server=socks4://197.234.181.19:5678','--disable-features=site-per-process']
+    headless: true
 });
 const page = await browser.newPage();
 

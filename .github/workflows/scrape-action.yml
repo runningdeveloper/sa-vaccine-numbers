@@ -4,8 +4,8 @@ on:
   push:
     branches: [ 'puppeteer-testing' ]
   # 3am is 5am in SA time
-  schedule:
-    - cron:  '0 3 * * *'
+  # schedule:
+  #   - cron:  '0 3 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,6 +31,8 @@ jobs:
       - run: node -v
 
       - run: npm install
+
+      - run: networkctl status eth0
 
       - run: node index.mjs
 
