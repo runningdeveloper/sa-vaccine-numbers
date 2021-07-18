@@ -4,11 +4,11 @@ import { parseNumbers } from './utils.mjs';
 import JSONdb from 'simple-json-db'
 const db = new JSONdb('./public/db.json');
 
-const url = `https://bit.ly/3rqCGhm`
+const url = `https://app.powerbi.com/view?r=eyJrIjoiMDNlNTMyZWUtYjkyYS00NGE1LTliZTktZDI4MDU0ZTU0OTk1IiwidCI6ImE1MTczNzFjLWYzMTYtNDg0Yy1hYzVjLTk4Yjc2MTI3NzkwYSIsImMiOjl9`
 
 const browser = await puppeteer.launch({
     headless: true,
-    args: ['--no-sandbox','--disable-features=site-per-process']
+    args: ['--proxy-server=socks4://197.234.181.19:5678','--disable-features=site-per-process']
 });
 const page = await browser.newPage();
 
