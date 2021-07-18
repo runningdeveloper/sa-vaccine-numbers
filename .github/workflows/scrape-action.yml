@@ -2,7 +2,7 @@ name: Scrape numbers
 
 on:
   # push:
-    branches: [ puppeteer-testing ]
+    branches: [ 'puppeteer-testing' ]
   # 3am is 5am in SA time
   schedule:
     - cron:  '0 3 * * *'

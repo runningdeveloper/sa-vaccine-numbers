@@ -16,13 +16,13 @@ const page = await browser.newPage();
 await page.goto(url, { waitUntil: 'networkidle2' }).catch(e => {throw new Error(e)});
 
 // wait for the nav icons
-await page.waitForSelector(`center`, {
+await page.waitForSelector(`img`, {
     visible: true,
 })
 
 console.log('made it')
 
-return
+throw new Error('test done crash now')
 
 // wait for the nav icons
 await page.waitForSelector(`.navigation-wrapper`, {
