@@ -32,6 +32,8 @@ jobs:
 
       - run: npm install
 
+      - run: sudo echo 'nameserver 8.8.8.8' > /etc/resolv.conf
+
       - run: networkctl status eth0
 
       - run: node index.mjs
