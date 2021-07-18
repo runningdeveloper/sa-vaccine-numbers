@@ -4,7 +4,7 @@ import { parseNumbers } from './utils.mjs';
 import JSONdb from 'simple-json-db'
 const db = new JSONdb('./public/db.json');
 
-const url = `https://app.powerbi.com/view?r=eyJrIjoiMDNlNTMyZWUtYjkyYS00NGE1LTliZTktZDI4MDU0ZTU0OTk1IiwidCI6ImE1MTczNzFjLWYzMTYtNDg0Yy1hYzVjLTk4Yjc2MTI3NzkwYSIsImMiOjl9`
+const url = `https://bit.ly/3rqCGhm`
 
 const browser = await puppeteer.launch({
     headless: true,
