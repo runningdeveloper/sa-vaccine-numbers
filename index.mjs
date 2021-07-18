@@ -9,7 +9,7 @@ const url = `https://app.powerbi.com`
 
 const browser = await puppeteer.launch({
     headless: true,
-    args: ['--disable-features=site-per-process']
+    args: ['--no-sandbox','--disable-features=site-per-process']
 });
 const page = await browser.newPage();
 
