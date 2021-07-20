@@ -52,7 +52,7 @@
         function App (props) {
 
             const [db, setDb] = useState(null);
-            const [prevDays, setPrevDays] = useState(1);
+            const [prevDays, setPrevDays] = useState(0);
             const [current, setCurrent] = useState(null);
 
             useEffect(async ()=>{
@@ -65,7 +65,7 @@
             const endOfData = isBefore(subDays(new Date(), prevDays), new Date(1625695200000))
 
             useEffect(()=>{
-                if(prevDays && db){
+                if(prevDays>=0 && db){
                     if(db.hasOwnProperty(getDateKey(prevDays))){
                         setCurrent(db[getDateKey(prevDays)])
                     }else{
