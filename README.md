@@ -10,6 +10,15 @@ The NICD is publishing data to a power bi dashboard here [https://sacoronavirus.
 
 Will try to keep the scraper up to date when things change
 
+### Challenges
+
+Cannot get the github action to run the puppeteer script. It doesn't seem to like the url, it cannot resolve the DNS for the powerbi website. I guess it has something to do with the action being a VM in azure. You can check some random debugging in the puppeteer-testing branch. So new solution to automate is to run the scrip on a raspberry pi at my home once a day.
+
+Some details mainly for me to remember what I did:
+
+- run using this command on the PI (it doesn't like the bundled chrome) ISPI=true node index.mjs
+- setup the bash scrip to pull from the repo, run and then commit db.json, push
+
 ## Why
 
 I don't really know what I'm doing. I wanted a simple vaccine number tracker to watch, can't wait till I'm allowed to get mine. If you think this is not useful or detrimental to the vaccine efforts let me know an I'll consider taking this down.

@@ -8,6 +8,7 @@ const url = `https://app.powerbi.com/view?r=eyJrIjoiMDNlNTMyZWUtYjkyYS00NGE1LTli
 
 const browser = await puppeteer.launch({
     headless: true,
+    executablePath: process.env.ISPI?'chromium-browser':null,
     args: ['--disable-features=site-per-process']
 });
 const page = await browser.newPage();

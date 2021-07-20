@@ -1,4 +1,4 @@
-name: Scrape numbers
+name: Make website
 
 on:
   push:
