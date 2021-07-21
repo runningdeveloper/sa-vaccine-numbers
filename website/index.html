@@ -16,20 +16,23 @@
     <section>Loading page...</section>
     <script type="module">
 
-        import { h, Component, render } from 'https://cdn.skypack.dev/preact';
-        import { useState, useEffect } from 'https://cdn.skypack.dev/preact/hooks';
-        import htm from 'https://cdn.skypack.dev/htm';
-        import subDays from 'https://cdn.skypack.dev/date-fns/subDays';
-        import format from 'https://cdn.skypack.dev/date-fns/format';
-        import isBefore from 'https://cdn.skypack.dev/date-fns/isBefore';
+        import { h, Component, render } from 'preact';
+        import { useState, useEffect } from 'preact/hooks';
+        import htm from 'htm';
+        import subDays from 'date-fns/subDays';
+        import format from 'date-fns/format';
+        import isBefore from 'date-fns/isBefore';
 
-        const saPopulation = 59.6e6
+        const saPopulation = 60e6
+        const saAdultPopulation = 39.8e6
+
       
         const html = htm.bind(h)
 
         const getDateKey = (days) => format(subDays(new Date(), days), 'dd-MM-yyyy')
 
         const percentOfPopulation = (amount) => ((amount/saPopulation)*100).toFixed(1)
+        const percentOfAdultPopulation = (amount) => ((amount/saAdultPopulation)*100).toFixed(1)
 
         const DataDisplay = (data) => {
 
@@ -40,6 +43,7 @@
                     <h2>Total last 24h: ${Intl.NumberFormat().format(data.vaccineToday)}</h2>
                     <h3>Total completed: ${data.totalCompletedVaccine?Intl.NumberFormat().format(data.totalCompletedVaccine):'no data'}</h3>
                     <h3>Total of population completed: ${data.totalCompletedVaccine?percentOfPopulation(data.totalCompletedVaccine)+`%`:'no data'}</h3>
+                    <h3>Total of adult population completed: ${data.totalCompletedVaccine?percentOfAdultPopulation(data.totalCompletedVaccine)+`%`:'no data'}</h3>
                     <h3>Total: ${Intl.NumberFormat().format(data.totalVaccine)}</h3>
                     <small>Date scraped: ${data.recorded}</small>
                 </article>`
@@ -94,7 +98,7 @@
 
         }
       
-        render(html`<${App} /><blockquote><footer>Source: <a href="https://sacoronavirus.co.za/latest-vaccine-statistics/">https://sacoronavirus.co.za/latest-vaccine-statistics/</a>, <a href="https://en.wikipedia.org/wiki/Demographics_of_South_Africa">https://en.wikipedia.org/wiki/Demographics_of_South_Africa</a></footer></blockquote>`, document.body);
+        render(html`<${App} /><blockquote><footer>Source: <a href="https://sacoronavirus.co.za/latest-vaccine-statistics/">https://sacoronavirus.co.za/latest-vaccine-statistics/</a>, <a href="https://worldpopulationreview.com/countries/south-africa-population">https://worldpopulationreview.com/countries/south-africa-population</a></footer></blockquote>`, document.body);
       </script>
     
 </body>

@@ -19,6 +19,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - run: cd website && npm install
+
+      - run: cd website && npm run build
+
+      # probably could make this better
       - name: Add the base path
         uses: jacobtomlinson/gha-find-replace@master
         with:

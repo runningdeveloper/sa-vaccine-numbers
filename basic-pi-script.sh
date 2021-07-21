@@ -4,6 +4,6 @@
 
 git pull
 ISPI=true node index.mjs
-git commit -m "scrape update" -- ./public/db.json
+git commit -m "scrape update" -- ./website/db.json
 git push
 echo "Done!"

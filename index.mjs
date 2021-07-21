@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer'
 import { format, isValid, parse } from 'date-fns'
 import { parseNumbers } from './utils.mjs';
 import JSONdb from 'simple-json-db'
-const db = new JSONdb('./public/db.json');
+const db = new JSONdb('./website/db.json');
 
 const url = `https://app.powerbi.com/view?r=eyJrIjoiMDNlNTMyZWUtYjkyYS00NGE1LTliZTktZDI4MDU0ZTU0OTk1IiwidCI6ImE1MTczNzFjLWYzMTYtNDg0Yy1hYzVjLTk4Yjc2MTI3NzkwYSIsImMiOjl9`
 
