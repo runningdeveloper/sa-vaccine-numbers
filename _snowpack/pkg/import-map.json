@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "date-fns/format": "./date-fns/format.js",
+    "date-fns/isBefore": "./date-fns/isBefore.js",
+    "date-fns/subDays": "./date-fns/subDays.js",
+    "htm": "./htm.js",
+    "preact": "./preact.js",
+    "preact/hooks": "./preact/hooks.js"
+  }
+}
