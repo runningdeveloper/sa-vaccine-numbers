@@ -88,7 +88,7 @@
                     <section>
                         <button disabled=${endOfData} onClick=${()=>setPrevDays(prevDays+1)}>Back</button>
                         <div style="width: 0.5em;"></div>
-                        <button disabled=${prevDays<=1} onClick=${()=>setPrevDays(prevDays-1)}>Forward</button>
+                        <button disabled=${prevDays<=0} onClick=${()=>setPrevDays(prevDays-1)}>Forward</button>
                     </section>
                 </main>
                 `
