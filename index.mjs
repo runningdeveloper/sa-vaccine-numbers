@@ -24,7 +24,7 @@ await page.waitForSelector(`.navigation-wrapper`, {
 
 await page.$eval(`[title="Next Page"]`, el => el.click());
 
-await page.waitForTimeout(2000)
+await page.waitForTimeout(3000)
 
 const frameOne = page.frames().find(a => a.name() === 'visual-sandbox')
 
@@ -65,11 +65,11 @@ console.log('totalVaccine', parseNumbers(totalVaccine))
 
 await page.$eval(`[title="Next Page"]`, el => el.click());
 
-await page.waitForTimeout(2000)
+await page.waitForTimeout(3000)
 
 await page.$eval(`[title="Next Page"]`, el => el.click());
 
-await page.waitForTimeout(2000)
+await page.waitForTimeout(3000)
 
 
 const frameJohnson = page.frames().filter(a => a.name() === 'visual-sandbox')[4]
