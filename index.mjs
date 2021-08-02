@@ -37,8 +37,8 @@ const reportNameSelector = `#pvExplorationHost text > title`
 const reportName = await page.$eval(reportNameSelector, el => el.textContent);
 console.log('name', reportName)
 
-const dateSelector = `#pvExplorationHost text > title`
-const reportDate = await page.$$eval(dateSelector, els => els.map((el) => el.textContent)[1]);
+// const dateSelector = `#pvExplorationHost text > title`
+const reportDate = reportName.substring(reportName.length-11) // await page.$$eval(dateSelector, els => els.map((el) => el.textContent)[1]);
 console.log('reportDate', reportDate)
 
 const vaccineTodaySelector = `.contentGrp title`
@@ -72,11 +72,11 @@ await page.$eval(`[title="Next Page"]`, el => el.click());
 await page.waitForTimeout(3000)
 
 
-const frameJohnson = page.frames().filter(a => a.name() === 'visual-sandbox')[4]
+const frameJohnson = page.frames().filter(a => a.name() === 'visual-sandbox')[1]
 
-const framePfizer = page.frames().filter(a => a.name() === 'visual-sandbox')[1]
+const framePfizer = page.frames().filter(a => a.name() === 'visual-sandbox')[2]
 
-const frameSecondPfizer = page.frames().filter(a => a.name() === 'visual-sandbox')[3]
+const frameSecondPfizer = page.frames().filter(a => a.name() === 'visual-sandbox')[6]
 
 await framePfizer.waitForSelector(`.contentGrp`, {
     visible: true,

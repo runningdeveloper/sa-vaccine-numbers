@@ -234,5 +234,27 @@
         "totalPfizer": 6011077,
         "totalSecondPfizer": 1440942,
         "totalCompletedVaccine": 2974404
+    },
+    "01-08-2021": {
+        "recorded": "2021-08-02T19:58:03.842Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00 01 Aug 2021",
+        "reportDate": "01 Aug 2021",
+        "vaccineToday": 17390,
+        "totalVaccine": 7567757,
+        "totalJohnson": 1539120,
+        "totalPfizer": 6028637,
+        "totalSecondPfizer": 1443832,
+        "totalCompletedVaccine": 2982952
+    },
+    "02-08-2021": {
+        "recorded": "2021-08-02T20:09:26.555Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00 02 Aug 2021",
+        "reportDate": "02 Aug 2021",
+        "vaccineToday": 187855,
+        "totalVaccine": 7769799,
+        "totalJohnson": 1580735,
+        "totalPfizer": 6189064,
+        "totalSecondPfizer": 1511666,
+        "totalCompletedVaccine": 3092401
     }
 }
