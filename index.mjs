@@ -49,6 +49,8 @@ console.log('vaccineToday', parseNumbers(vaccineToday))
 
 await page.$eval(`[title="Next Page"]`, el => el.click());
 
+await page.waitForTimeout(3000)
+
 const frameTwo = page.frames().find(a => a.name() === 'visual-sandbox')
 
 
