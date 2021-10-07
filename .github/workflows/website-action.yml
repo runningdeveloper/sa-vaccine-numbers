@@ -29,7 +29,7 @@ jobs:
         with:
           find: '<base href="/">'
           replace: '<base href="https://runningdeveloper.github.io/sa-vaccine-numbers/">'
-          include: "index.html"
+          include: "**index.html"
           regex: false
 
       - name: Deploy site
