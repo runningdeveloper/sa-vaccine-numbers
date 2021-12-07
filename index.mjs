@@ -22,7 +22,7 @@ await page.waitForSelector(`.navigation-wrapper`, {
 
 // click for the next page 
 
-await page.$eval(`[title="Next Page"]`, el => el.click());
+await page.$eval(`[aria-label="Next Page"]`, el => el.click());
 
 await page.waitForTimeout(3000)
 
@@ -47,7 +47,7 @@ console.log('vaccineToday', parseNumbers(vaccineToday))
 
 // click for the next page 
 
-await page.$eval(`[title="Next Page"]`, el => el.click());
+await page.$eval(`[aria-label="Next Page"]`, el => el.click());
 
 await page.waitForTimeout(3000)
 
@@ -65,11 +65,11 @@ console.log('totalVaccine', parseNumbers(totalVaccine))
 
 // click for the next page 
 
-await page.$eval(`[title="Next Page"]`, el => el.click());
+await page.$eval(`[aria-label="Next Page"]`, el => el.click());
 
 await page.waitForTimeout(3000)
 
-await page.$eval(`[title="Next Page"]`, el => el.click());
+await page.$eval(`[aria-label="Next Page"]`, el => el.click());
 
 await page.waitForTimeout(3000)
 
