@@ -1862,5 +1862,16 @@
         "totalPfizer": 18642434,
         "totalSecondPfizer": 12049170,
         "totalCompletedVaccine": 18874881
+    },
+    "29-12-2021": {
+        "recorded": "2021-12-29T19:06:15.077Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00 29 Dec 2021",
+        "reportDate": "29 Dec 2021",
+        "vaccineToday": 48874,
+        "totalVaccine": 27913197,
+        "totalJohnson": 6835964,
+        "totalPfizer": 18672939,
+        "totalSecondPfizer": 12069744,
+        "totalCompletedVaccine": 18905708
     }
 }
