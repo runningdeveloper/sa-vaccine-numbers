@@ -16,6 +16,7 @@ Cannot get the github action to run the puppeteer script. It doesn't seem to lik
 
 Some details mainly for me to remember what I did:
 
+- install chrome ```sudo apt install chromium``` (assuming bullseye raspbian)
 - run using this command on the PI (it doesn't like the bundled chrome) ISPI=true node index.mjs
 - setup the bash scrip to pull from the repo, run and then commit db.json, push
 
