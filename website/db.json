@@ -2830,5 +2830,27 @@
         "totalPfizer": 25568921,
         "totalSecondPfizer": 741019,
         "totalCompletedVaccine": 8990615
+    },
+    "03-04-2022": {
+        "recorded": "2022-04-03T19:06:39.715Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00 03 Apr 2022",
+        "reportDate": "03 Apr 2022",
+        "vaccineToday": 2133,
+        "totalVaccine": 33821204,
+        "totalJohnson": 8250402,
+        "totalPfizer": 25570802,
+        "totalSecondPfizer": 741019,
+        "totalCompletedVaccine": 8991421
+    },
+    "04-04-2022": {
+        "recorded": "2022-04-04T19:06:41.508Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00 04 Apr 2022",
+        "reportDate": "04 Apr 2022",
+        "vaccineToday": 49706,
+        "totalVaccine": 33875176,
+        "totalJohnson": 8263111,
+        "totalPfizer": 25612065,
+        "totalSecondPfizer": 741021,
+        "totalCompletedVaccine": 9004132
     }
 }
