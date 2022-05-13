@@ -3226,5 +3226,16 @@
         "totalPfizer": 26733071,
         "totalSecondPfizer": 741426,
         "totalCompletedVaccine": 9378918
+    },
+    "13-05-2022": {
+        "recorded": "2022-05-13T19:06:45.078Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00 13 May 2022",
+        "reportDate": "13 May 2022",
+        "vaccineToday": 50711,
+        "totalVaccine": 35425251,
+        "totalJohnson": 8651259,
+        "totalPfizer": 26773992,
+        "totalSecondPfizer": 741439,
+        "totalCompletedVaccine": 9392698
     }
 }
