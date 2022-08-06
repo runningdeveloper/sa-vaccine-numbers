@@ -33,7 +33,7 @@ await frameOne.waitForSelector(`.contentGrp`, {
     visible: true,
 })
 
-const reportNameSelector = `#pvExplorationHost text > title`
+const reportNameSelector = `visual-modern svg`
 const reportName = await page.$eval(reportNameSelector, el => el.textContent);
 console.log('name', reportName)
 
