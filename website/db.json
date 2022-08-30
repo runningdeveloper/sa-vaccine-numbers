@@ -4007,5 +4007,16 @@
         "totalPfizer": 28258600,
         "totalSecondPfizer": 741926,
         "totalCompletedVaccine": 9929920
+    },
+    "30-08-2022": {
+        "recorded": "2022-08-30T19:06:45.105Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00 30 Aug 2022",
+        "reportDate": "30 Aug 2022",
+        "vaccineToday": 8067,
+        "totalVaccine": 37456345,
+        "totalJohnson": 9190172,
+        "totalPfizer": 28266173,
+        "totalSecondPfizer": 741930,
+        "totalCompletedVaccine": 9932102
     }
 }
