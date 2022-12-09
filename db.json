@@ -4733,5 +4733,16 @@
         "totalPfizer": 28651953,
         "totalSecondPfizer": 742092,
         "totalCompletedVaccine": 10090309
+    },
+    "09-12-2022": {
+        "recorded": "2022-12-09T19:07:07.984Z",
+        "reportName": "COVID-19 Vaccination Summary as at 17:00 09 Dec 2022",
+        "reportDate": "09 Dec 2022",
+        "vaccineToday": 4303,
+        "totalVaccine": 38016970,
+        "totalJohnson": 9354181,
+        "totalPfizer": 28662789,
+        "totalSecondPfizer": 742097,
+        "totalCompletedVaccine": 10096278
     }
 }
